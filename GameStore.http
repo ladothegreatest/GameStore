@@ -1,0 +1,38 @@
+@GameStore_HostAddress = http://localhost:5274
+
+GET {{GameStore_HostAddress}}/genres
+Accept: application/json
+###
+GET {{GameStore_HostAddress}}/  games
+Accept: application/json
+
+###
+GET {{GameStore_HostAddress}}/games/5
+Accept: application/json
+
+###
+POST {{GameStore_HostAddress}}/games/3
+Content-Type: application/json
+
+{
+    "name": "Assasin's Creed",
+    "genreId": 1,
+    "price": 19.99,
+    "releaseDate": "2011-11-18"
+}
+
+###
+PUT {{GameStore_HostAddress}}/games/3
+Content-Type: application/json
+ 
+ {
+    "name": "Assasin's Creed",
+    "genreId": 1,
+    "price": 18.19,
+    "releaseDate": "2014-08-24"
+ }
+
+###
+DELETE {{GameStore_HostAddress}}/games/7
+
+ 
